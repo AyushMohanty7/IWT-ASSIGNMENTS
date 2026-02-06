@@ -1,0 +1,185 @@
+body {
+    background-color: #0c0c0c;
+    color: #e0e0e0;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #0c0c0c;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    color: #0c0c0c;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #aaaaaa;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 50px;
+    gap: 50px;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.live-status {
+    color: #ffcc00;
+    font-size: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 56px;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.gold-text {
+    color: #ffcc00;
+}
+
+p {
+    color: #aaaaaa;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.market-right {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.spot-price {
+    margin-bottom: 20px;
+}
+
+.price-label {
+    font-size: 10px;
+    color: #777;
+    margin: 0;
+}
+
+.live-indicator {
+    font-size: 10px;
+    color: #ffcc00;
+    float: right;
+    margin: 0;
+}
+
+.spot-price h3 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.change {
+    color: #3EC70B;
+    font-size: 14px;
+    margin: 0;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.price-item {
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.price-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.price-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.stats-footer {
+    display: flex;
+    padding: 30px 50px;
+    gap: 50px;
+    border-top: 1px solid #1a1a1a;
+    margin-top: 0px;
+}
+
+.stat-item h2 {
+    font-size: 32px;
+    color: #ffcc00;
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 11px;
+    margin: 0;
+    color: #777;
+}
