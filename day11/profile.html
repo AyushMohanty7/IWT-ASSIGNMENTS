@@ -1,0 +1,57 @@
+<style>
+    body {
+        background-color: #0A0A0A; 
+        color: #f0f0f0;
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 40px;
+    }  
+    .hero {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .hero h1 { font-size: 3rem; color: #fff; }
+    .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-card {
+        flex: 1;
+        min-width: 300px;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        padding: 20px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    .project-card:hover {
+        border-color: #007bff; 
+    }
+    .btn-view {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 15px;
+    }
+</style>
+<body>
+    <header class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I build modern web experiences.</p>
+    </header>
+
+    <div class="portfolio-grid">
+        <div class="project-card">
+            <h3>E-commerce Project</h3>
+            <p>A functional store layout with black themes.</p>
+            <a href="#" class="btn-view">View Project</a>
+        </div>
+        
+    </div>
+</body>
