@@ -49,37 +49,75 @@ thead tr {
 tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-.profile-card {
-    border: 3px solid #2255A4;
-    background-color: #B3E3EE;
-    border-radius: 15px;
-    width: 280px;
-    padding: 25px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    margin: 20px auto;
-}
+.kohli-card-v2 {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* Deep navy gradient */
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
 
-.profile-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #004ba0;
-}
+        .kohli-card-v2 img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #f1c40f; /* Gold border */
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
 
-.profile-card h3 {
-    color: #2255A4;
-    margin: 15px 0 5px;
-}
+        .kohli-card-v2 h3 {
+            margin: 10px 0 5px;
+            font-size: 26px;
+            color: #f1c40f;
+            letter-spacing: 1px;
+        }
 
-.profile-card .role {
-    font-weight: bold;
-    color: #0a0a0a;
-}
+        .kohli-card-v2 .role {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #bdc3c7;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
 
-.profile-card .stats {
-    margin-top: 15px;
-    font-size: 14px;
-    border-top: 1px solid rgba(0, 75, 160, 0.3);
-    padding-top: 10px;
-}
+        .kohli-card-v2 .bio {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 15px 0;
+            color: #ecf0f1;
+            padding: 0 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .stat-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #95a5a6;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f1c40f;
+        }
+    </style>
