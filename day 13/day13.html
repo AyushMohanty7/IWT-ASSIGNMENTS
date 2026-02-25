@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>JAVA SCRIPT</title>
+    <style>
+        body {
+            text-align: center; 
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body bgcolor="black" text="red">
+   <script>
+   let a=new Array(3,66,12,70,5); 
+   document.write("first element="+a[0]+"<br>");  
+   document.write("second element="+a[1]+"<br>"); 
+   document.write("third element="+a[2]+"<br>"); 
+   document.write("fourth element="+a[3]+"<br>"); 
+   document.write("fifth element="+a[4]); 
+   document.write("<hr>");
+
+   let b=new Array(3,66,12,70,5); 
+   let i; 
+   for(i=4;i>=0;i--)  
+   {  
+     document.write(b[i]+"<br>"); 
+   } 
+   document.write("<hr>");
+   
+   let d=new Array("r","e","k","a","s"); 
+   let c=d.sort(); 
+   document.write(c);
+   document.write("<hr>");
+
+   function addition(e,f) 
+   { 
+       g=e+f; 
+       return(g); 
+   } 
+   document.write("addition value="+addition(5,4)); 
+   document.write("<hr>");
+   function factorial(n) 
+   { 
+      let f1=1; 
+      while(n!=0) 
+      { 
+         f1=f1*n; 
+         n--; 
+      } 
+      return(f1); 
+    } 
+    document.write("factorial value="+factorial(5));
+    document.write("<hr>"); 
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>JS Assignment Questions</title>
+    <style>
+       body {
+            text-align: center; 
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+
+        h1 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            width: 50%;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body bgcolor="black" text="red">
+ 
+    <h1>OUTPUT ASSIGNMENT5</h1>
+
+    <script>
+        // --- 1. Grade Assignment
+        let marks = 82;
+        let grade;
+
+        if (marks >= 90) { grade = "Grade A"; }
+        else if (marks >= 75) { grade = "Grade B"; }
+        else if (marks >= 50) { grade = "Grade C"; }
+        else { grade = "Fail"; }
+
+        document.write("<b>1. Grade Decider:</b><br>Marks: " + marks + " -> " + grade);
+        console.log("Grade:", grade);
+        document.write("<hr>");
+
+        // --- 2. Factorial  ---
+        let numFact = 5;
+        let f = 1;
+        for (let i = 1; i <= numFact; i++) {
+            f = f * i;
+        }
+
+        document.write("<b>2. Factorial of a number(Using for Loop):</b><br>Factorial of " + numFact + " is: " + f);
+        console.log("Factorial:", f);
+        document.write("<hr>");
+
+        // --- 3. Palindrome Check ---
+        let n = 121, temp = n, rev = 0, rem;
+        while (temp != 0) {
+            rem = temp % 10;
+            rev = rev * 10 + rem;
+            temp = Math.floor(temp / 10);
+        }
+
+        document.write("<b>3. Palindrome Checker:</b><br>");
+        if (n == rev) {
+            document.write(n + " is a Palindrome");
+            console.log(n + " is a palindrome");
+        } else {
+            document.write(n + " is not a Palindrome");
+            console.log(n + " is not a palindrome");
+        }
+        document.write("<hr>");
+
+        // --- 4. Array Stats (Sum, Avg, Largest, Smallest) ---
+        let nums = [10, 20, 5, 40, 15];
+        let sum = 0, max = nums[0], min = nums[0];
+
+        for (let j = 0; j < nums.length; j++) {
+            sum += nums[j];
+            if (nums[j] > max) max = nums[j];
+            if (nums[j] < min) min = nums[j];
+        }
+        let avg = sum / nums.length;
+
+        document.write("<b>4. Array Stats:</b><br>");
+        document.write("Array: [" + nums + "]<br><br>");
+        document.write("Sum: " + sum + ", Avg: " + avg + ", Max: " + max + ", Min: " + min);
+        console.log("Stats:", {sum, avg, max, min});
+        document.write("<hr>");
+
+        // --- 5. Second Largest (No Sorting)---
+        let arr2 = [3, 66, 12, 70, 5];
+        let large = arr2[0];
+        let second = 0; 
+
+        for (let k = 1; k < arr2.length; k++) {
+            if (arr2[k] > large) {
+                second = large;
+                large = arr2[k];
+            } else if (arr2[k] > second && arr2[k] != large) {
+                second = arr2[k];
+            }
+        }
+        document.write("<b>5. Second Largest number of array:</b><br>Array: [" + arr2 + "]<br><br>Second largest is: " + second + "<hr>");
+        console.log("Second Largest: " + second);
+
+        // --- 6. Remove Duplicates ---
+        let arr6 = [1, 2, 2, 3, 4, 4, 5];
+        let uniqueArr = [];
+        for(var i = 0; i < arr6.length; i++) {
+            if(uniqueArr.indexOf(arr6[i]) === -1) {
+                uniqueArr.push(arr6[i]);
+            }
+        }
+        document.write("<b>6. Without Duplicates elements:</b><br>Original: [" + arr6 + "]<br>New Array: [" + uniqueArr + "]<hr>");
+        console.log("Unique Array:", uniqueArr);
+
+        // --- 7. Count Occurrences ---
+        let arr7 = ["a", "b", "a", "c", "b", "a"];
+        let counts = {};
+        document.write("<b>7. Count Occurrences:</b><br>");
+        document.write("Array: [" + arr7 + "]<br><br>");
+        for (var i = 0; i < arr7.length; i++) {
+            var num = arr7[i];
+            counts[num] = counts[num] ? counts[num] + 1 : 1;
+        }
+        for (var key in counts) {
+            document.write(key + " occurs " + counts[key] + " times<br>");
+        }
+        document.write("<hr>");
+        console.log("Occurrences:", counts);
+
+        // --- 8. Prime Function ---
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (var i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+        document.write("<b>8. Prime Number Check:</b><br>");
+        document.write("Is 7 prime : " + isPrime(7) + "<br>");
+        document.write("Is 10 prime: " + isPrime(10) + "<br>");
+        document.write("Is 23 prime: " + isPrime(23));
+        document.write("<hr>");
+        console.log("Prime Tests: 7=" + isPrime(7) + ", 10=" + isPrime(10) + ", 23=" + isPrime(23));
+
+</script>
+</body>
+</html>

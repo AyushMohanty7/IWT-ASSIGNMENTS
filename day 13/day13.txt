@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>JAVA SCRIPT</title>
+    <script language="JavaScript">
+    <style>
+        body {
+            text-align: center; 
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body bgcolor="black" text="red">
+<script>
+var a=new Array(3,66,12,70,5); 
+document.write(“first element=”+a[0]+”<br>”);  
+document.write(“second element=”+a[1]+”<br>”); 
+document.write(“third element=”+a[2]+”<br>”); 
+document.write(“fourth element=”+a[3]+”<br>”); 
+document.write(“fifth element=”+a[4]); 
+</script>
+
+</body>
+</html>
