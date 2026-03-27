@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Counter Task</title>
+    <style>
+        input { width: 50px; text-align: center; }
+        button { padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h3>Simple Counter</h3>
+    <button id="minus">-</button>
+    <input type="number" id="counter" value="0" readonly>
+    <button id="plus">+</button>
+
+    <script>
+        const counterInput = document.getElementById('counter');
+        const plusBtn = document.getElementById('plus');
+        const minusBtn = document.getElementById('minus');
+
+        plusBtn.onclick = () => {
+            counterInput.value = parseInt(counterInput.value) + 1;
+        };
+
+        minusBtn.onclick = () => {
+            let currentVal = parseInt(counterInput.value);
+            if (currentVal > 0) {
+                counterInput.value = currentVal - 1;
+            }
+        };
+    </script>
+
+</body>
+</html>

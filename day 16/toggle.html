@@ -1,0 +1,24 @@
+<html>
+<body>
+
+    <p id="myParagraph">This is the paragraph that will be toggled.</p>
+    <button id="toggleBtn">Hide Text</button>
+
+    <script>
+        const btn = document.getElementById("toggleBtn");
+        const para = document.getElementById("myParagraph");
+
+        btn.onclick = function() {
+            // Check if the paragraph is currently hidden
+            if (para.style.display === "none") {
+                para.style.display = "block";   // Show the paragraph
+                btn.textContent = "Hide Text";  // Update button text
+            } else {
+                para.style.display = "none";    // Hide the paragraph
+                btn.textContent = "Show Text";  // Update button text
+            }
+        };
+    </script>
+
+</body>
+</html>

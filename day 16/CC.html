@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Simple Black and White UI */
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 50px; background: #f9f9f9; }
+        .card { background: #fff; width: 320px; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; text-align: center; font-size: 1.4rem; }
+        
+        .field { margin-bottom: 15px; }
+        label { display: block; font-size: 0.85rem; margin-bottom: 5px; color: #333; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 1rem; }
+        
+        /* Error Message Style */
+        #error { color: #d00; font-size: 0.75rem; margin-bottom: 10px; display: none; text-align: center; font-weight: bold; }
+        
+        button { width: 100%; padding: 12px; background: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; }
+        button:hover { background: #333; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Currency Converter</h2>
+    
+    <div id="error"></div> <!-- Error display -->
+
+    <div class="field">
+        <label>From:</label>
+        <select id="from">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="INR">INR</option>
+            <option value="AUD">AUD</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+
+    <div class="field">
+        <label>To:</label>
+        <select id="to">
+            <option value="INR" selected>INR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <input type="text" id="output" readonly placeholder="Result">
+    </div>
+
+    <button onclick="calculate()">Convert</button>
+</div>
+
+<script>
+    // Rates exactly as provided in the assignment image
+    const conversionRates = {
+        USD: { EUR: 0.93, GBP: 0.82, INR: 82.74, AUD: 1.47 },
+        EUR: { USD: 1.08, GBP: 0.88, INR: 89.06, AUD: 1.58 },
+        GBP: { USD: 1.22, EUR: 1.14, INR: 101.5, AUD: 1.80 },
+        INR: { USD: 0.012, EUR: 0.011, GBP: 0.0098, AUD: 0.018 },
+        AUD: { USD: 0.68, EUR: 0.63, GBP: 0.55, INR: 55.87 }
+    };
+
+    function calculate() {
+        const amount = document.getElementById('amount').value;
+        const from = document.getElementById('from').value;
+        const to = document.getElementById('to').value;
+        const errorDiv = document.getElementById('error');
+        const outputField = document.getElementById('output');
+
+        // Reset state
+        errorDiv.style.display = "none";
+        outputField.value = "";
+
+        // Check for Empty or Zero field
+        if (!amount || amount <= 0) {
+            errorDiv.innerText = "Error: Please enter a valid amount.";
+            errorDiv.style.display = "block";
+            return;
+        }
+
+        // Check for Same Currency Error
+        if (from === to) {
+            errorDiv.innerText = "Error: 'From' and 'To' cannot be the same.";
+            errorDiv.style.display = "block";
+            return;
+        }
+
+        // Success: Perform Calculation
+        const rate = conversionRates[from][to];
+        const result = (amount * rate).toFixed(2);
+        outputField.value = result;
+    }
+</script>
+
+</body>
+</html>
