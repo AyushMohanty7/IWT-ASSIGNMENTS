@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>DOM</title>
+         <script>     
+	        function color(){
+                var col=document.getElementById("select").value;
+                if(col=="Red"){
+                    document.bgColor="red"
+                }
+                else if (col=="Blue"){
+                    document.bgColor="blue"
+                }
+                else if (col=="Green"){
+                    document.bgColor="green"
+                }
+                else if(col=="Yellow"){
+                    document.bgColor="yellow"
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="heading1">Background Color Change</h1>
+        <!-- Number 1:<input type="text" id="txt" placeholder="Enter the num">
+        Number 2:<input type="text" id="txt2" placeholder="Enter the num"> -->
+
+        <select id="select" onchange="color()">
+            <option value="None">none</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+        </select>
+    </body>
+</html>
+

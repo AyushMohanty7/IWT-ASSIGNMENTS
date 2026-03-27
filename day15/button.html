@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM </title>
+</head>
+<body>
+
+    <h1 id="heading1">Hello World</h1>
+    
+    <!-- Header Update Section -->
+    <div style="margin-bottom: 20px;">
+        <input type="button" value="Update Title" onclick="func()">
+    </div>
+
+    <!-- Live Text Section -->
+    <div style="margin-bottom: 20px;">
+        <input type="text" id="txt" placeholder="Enter the text" oninput="showText()">
+        <p id="display"></p>
+    </div>
+
+    <!-- Addition Calculator Section -->
+    <div style="margin-bottom: 20px;">
+        <input type="number" id="num1" placeholder="Number 1"> +
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="add()">Calculate Sum</button>
+        <h4 id="result">Total: 0</h4>
+    </div>
+
+    <script>
+        // Changes the first <h1> on the page
+        function func() {
+            document.getElementsByTagName("h1")[0].innerHTML = "Welcome to silicon";
+        }
+
+        // Displays input text inside a <p> tag
+        function showText() {
+            var ele = document.getElementById("txt").value;
+            document.getElementById("display").innerHTML = "You typed: " + ele;
+        }
+
+        // Performs the math addition
+        function add() {
+            var n1 = Number(document.getElementById("num1").value);
+            var n2 = Number(document.getElementById("num2").value);
+            var sum = n1 + n2;
+            document.getElementById("result").innerHTML = "Total: " + sum;
+        }
+        <ul>
+                 <li>Apple</li>
+                 <li>Banana</li>
+                 <li>Cherry</li>
+        </ul>
+    </script>
+
+</body>
+                
+</html>
